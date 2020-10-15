@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="personneId1" class="com.ghazala.Personne">
+       <property name="firstName" value="ali"></property>
+        <property name="lastName" value="maghraoui"></property>
+        <property name="age" value="40"></property>
+    </bean>
+    <!--
+        <constructor-arg type="java.lang.String" value="ali"></constructor-arg>
+        <constructor-arg type="java.lang.String" value="maghraoui" ></constructor-arg>
+        <constructor-arg type="int" value="40"></constructor-arg>
+        -->
+    <bean id="personneId" class="com.ghazala.Personne">
+        <property name="firstName" value="ammar"></property>
+        <property name="lastName" value="raggad"></property>
+        <property name="age" value="35"></property>
+    </bean>
+
+    <bean id="factureId" class="com.ghazala.Facture">
+        <property name="codeFacture" value="1"></property>
+        <property name="produit" value="LAPTOP"></property>
+        <property name="personne" ref="personneId"></property>
+    </bean>
+
+
+
+
+</beans>
